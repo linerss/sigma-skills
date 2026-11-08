@@ -1,11 +1,11 @@
 ---
 name: sigma-html-benchmark
-description: Design a Sigma Computing workbook or data app as an HTML mockup BEFORE building anything in Sigma. Use whenever someone asks to build, redesign, or plan a Sigma dashboard, data app, or report — grill the user one question at a time, then produce a Sigma-buildable HTML benchmark on Sigma's grid with real sample numbers, get it agreed, then hand it to the sigma-build skill.
+description: "Design a Sigma Computing workbook or data app as an HTML mockup BEFORE building anything in Sigma. Use whenever someone asks to build, redesign, or plan a Sigma dashboard, data app, or report: grill the user one question at a time, then produce a Sigma-buildable HTML benchmark on Sigma's grid with real sample numbers, get it agreed, then hand it to the sigma-build skill."
 ---
 
 # Sigma HTML Benchmark
 
-**Always build the HTML first.** Iterating on layout, hierarchy, and copy in HTML takes minutes; iterating inside a Sigma workbook takes hours. The HTML benchmark becomes the visual quality bar the Sigma build is measured against — screen by screen, element by element.
+**Always build the HTML first.** Iterating on layout, hierarchy, and copy in HTML takes minutes; iterating inside a Sigma workbook takes hours. The HTML benchmark becomes the visual quality bar the Sigma build is measured against: screen by screen, element by element.
 
 The benchmark must be **Sigma-buildable**. A beautiful mockup Sigma cannot reproduce is worse than useless: it sets an expectation the build will miss. Only design what Sigma can do natively.
 
@@ -29,7 +29,7 @@ Sigma ships changes every week. Before designing or building with any feature yo
 Before designing anything, interview the user until there is a shared understanding of what to build. Most bad dashboards come from a design that guessed.
 
 - Ask **one question at a time**. Use a multiple-choice question tool if your agent has one, with 2–4 concrete options and room for a custom answer; otherwise ask in plain text.
-- Acknowledge each answer in a sentence, then ask the next question. Resolve decisions in dependency order — reader and job first, then pages, then elements, then details.
+- Acknowledge each answer in a sentence, then ask the next question. Resolve decisions in dependency order: reader and job first, then pages, then elements, then details.
 - Never ask what you can find out yourself. Check the data, existing workbooks, and prior notes first; ask only what only the user can answer.
 - Keep going until every branch is resolved, then summarize the decisions and confirm before designing.
 
@@ -49,7 +49,7 @@ Questions to cover:
 
 ### 3. Map to Sigma's building blocks
 
-Design only with elements Sigma has — data elements (tables, pivots, charts), UI elements (text, buttons, images, dividers, embeds), control elements (filters and parameters), plus input tables and layout containers:
+Design only with elements Sigma has: data elements (tables, pivots, charts), UI elements (text, buttons, images, dividers, embeds), control elements (filters and parameters), plus input tables and layout containers:
 
 | Need | Sigma element |
 |---|---|
@@ -70,7 +70,7 @@ If a requested feature has no Sigma equivalent, say so in the benchmark notes an
 
 ### 4. Lay it out on Sigma's grid
 
-- Lay pages out on a **24-column grid** — the grid Sigma's own build tooling uses. Size every element in whole columns (e.g. 16/8, 14/10, 12/12, 8/8/8) and keep shared top edges and heights inside a horizontal band. Check the workbook's canvas width setting (Full or a custom maximum) and design at that width.
+- Lay pages out on a **24-column grid**: the grid Sigma's own build tooling uses. Size every element in whole columns (e.g. 16/8, 14/10, 12/12, 8/8/8) and keep shared top edges and heights inside a horizontal band. Check the workbook's canvas width setting (Full or a custom maximum) and design at that width.
 - Where a section should reflow with content or screen size, design it as a **stack** (a container laid out like CSS flexbox: row or column, gap, fill / fit-content / fixed sizing) rather than fixed grid positions. Note in the build sheet which sections are stacks.
 - Build the HTML with a CSS grid of 24 equal columns at a typical client screen width (1440–1512px) so proportions translate 1:1.
 - Stack the page as bands, top to bottom: title → KPIs → main chart(s) → detail table. Controls go in a top toolbar band or a left rail column.
@@ -105,4 +105,4 @@ If a requested feature has no Sigma equivalent, say so in the benchmark notes an
 
 ---
 
-Part of [sigma-skills](https://github.com/linerss/sigma-skills) by [Greyfield Data](https://greyfielddata.com) — Sigma Computing consultants.
+Part of [sigma-skills](https://github.com/linerss/sigma-skills) by [Greyfield Data](https://greyfielddata.com): Sigma Computing consultants.

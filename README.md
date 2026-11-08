@@ -1,22 +1,22 @@
 # Sigma Skills
 
-Agent skills for building client-ready [Sigma Computing](https://www.sigmacomputing.com) workbooks and data apps — the process we use on client work at [Greyfield Data](https://greyfielddata.com).
+Agent skills for building client-ready [Sigma Computing](https://www.sigmacomputing.com) workbooks and data apps: the process we use on client work at [Greyfield Data](https://greyfielddata.com).
 
 They work with Claude, Cursor, or any agent that reads `SKILL.md` files, on any Sigma org.
 
 | Skill | What it does |
 |---|---|
-| [`sigma-html-benchmark`](skills/sigma-html-benchmark/SKILL.md) | Grills you on the reader, metrics, and pages, then designs the workbook as a Sigma-buildable HTML mockup with real numbers — **before** anything is built in Sigma. |
+| [`sigma-html-benchmark`](skills/sigma-html-benchmark/SKILL.md) | Grills you on the reader, metrics, and pages, then designs the workbook as a Sigma-buildable HTML mockup with real numbers: **before** anything is built in Sigma. |
 | [`sigma-build`](skills/sigma-build/SKILL.md) | Builds the workbook to match the agreed benchmark. Uses a Sigma MCP connector when one is connected, otherwise writes click-by-click steps for the Sigma UI. |
 | [`sigma-workbook-qa`](skills/sigma-workbook-qa/SKILL.md) | Renders every page, names defects, ties every headline KPI to the warehouse, exercises every control, and signs off on the published version. |
 
 ## Why HTML first
 
-Iterating on layout and copy in HTML takes minutes. Iterating inside a Sigma workbook takes hours. The benchmark is designed only with native Sigma elements on a 24-column grid, so the build can match it — and QA has a clear bar to measure against.
+Iterating on layout and copy in HTML takes minutes. Iterating inside a Sigma workbook takes hours. The benchmark is designed only with native Sigma elements on a 24-column grid, so the build can match it: and QA has a clear bar to measure against.
 
 ## House rules built in
 
-- Title Case for pages, titles, tabs, and menus — acronyms and client terms kept as-is.
+- Title Case for pages, titles, tabs, and menus: acronyms and client terms kept as-is.
 - Never change the client's math or terminology; flag concerns instead.
 - Every headline KPI tied out against an independent warehouse query.
 - Client screenshots come from the published view, never edit mode.

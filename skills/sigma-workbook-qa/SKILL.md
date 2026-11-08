@@ -1,13 +1,13 @@
 ---
 name: sigma-workbook-qa
-description: Grill the user, then review, polish, and sign off Sigma Computing workbooks and data apps before they reach a client or exec. Use when asked to QA, audit, clean up, fix, polish, or "make client-ready" a Sigma workbook, dashboard, page, or embedded view — render the real pages, name defects, fix the smallest thing, verify the data, and re-render before calling it done.
+description: "Grill the user, then review, polish, and sign off Sigma Computing workbooks and data apps before they reach a client or exec. Use when asked to QA, audit, clean up, fix, polish, or \"make client-ready\" a Sigma workbook, dashboard, page, or embedded view: render the real pages, name defects, fix the smallest thing, verify the data, and re-render before calling it done."
 ---
 
 # Sigma Workbook QA
 
 A Sigma workbook is not done because it saved, published, or the query ran. It is done when every page a reader will open renders cleanly, the numbers tie out to the warehouse, the controls do what their labels say, and the published version has been inspected the way the client will see it.
 
-Use this skill for any Sigma workbook, dashboard, data app, or embed that is about to be shared, published, or handed off — and for "something looks off" reviews of existing workbooks.
+Use this skill for any Sigma workbook, dashboard, data app, or embed that is about to be shared, published, or handed off, and for "something looks off" reviews of existing workbooks.
 
 ## Core rules
 
@@ -20,7 +20,7 @@ Use this skill for any Sigma workbook, dashboard, data app, or embed that is abo
 ## House rules
 
 1. **Title Case** for page names, element titles, tabs, menus, and buttons. Keep acronyms and client terms exactly as written.
-2. **Never change the math or the terminology** while fixing. If a calculation looks wrong, flag it and ask — do not "fix" it silently.
+2. **Never change the math or the terminology** while fixing. If a calculation looks wrong, flag it and ask. Do not "fix" it silently.
 3. **Tie out every headline KPI** against an independent warehouse query.
 4. **No edit-mode screenshots for clients.** Review and capture the published view.
 
@@ -35,7 +35,7 @@ Sigma ships changes every week. Before designing or building with any feature yo
 Before reviewing, interview the user so the review checks what matters. Ask **one question at a time** (multiple-choice with 2–4 concrete options when your agent supports it), acknowledge each answer, and stop once nothing is left to guess. Never ask what you can see in the workbook yourself.
 
 - Is there an HTML benchmark or design to compare against?
-- Who will read it — internal, client, embedded users?
+- Who will read it: internal, client, embedded users?
 - Which numbers matter most, and what should they tie out to?
 - Review only, or fix what you find?
 - Anything that must not change (calculations, labels, layout)?
@@ -47,7 +47,7 @@ Before reviewing, interview the user so the review checks what matters. Ask **on
 - Note who reads it: internal analysts, client execs, embedded/guest users. Embedded and guest viewers see less, so check what they can and cannot open.
 - Check whether you are looking at the draft or the published version. Review the published version before sign-off.
 
-### 2. Visual pass — every page, top to bottom
+### 2. Visual pass: every page, top to bottom
 
 Capture the first viewport, then scroll. Lower sections are where defects hide. If there is an HTML benchmark, the bar is **pixel perfect**: render it and the published Sigma page at the same viewport width, measure card edges, column widths, gutters, heights, and font sizes in both, and log every difference as *element → benchmark vs Sigma*. A page passes only when the measurements match or the gap is a documented Sigma limitation.
 
@@ -55,7 +55,7 @@ Common Sigma defects to look for:
 
 - Titles, page names, tabs, and buttons not in Title Case.
 - Element titles that are default names (`Table 1`, `Viz 3`, raw column names) or stale after a rename.
-- KPIs with no comparison, period label, or unit — a bare number nobody can judge.
+- KPIs with no comparison, period label, or unit: a bare number nobody can judge.
 - Raw column names in headers and axes (`TOTAL_REV_USD`, `created_at_utc`) instead of business labels.
 - Inconsistent number formats across elements showing the same metric (currency vs plain, 0 vs 2 decimals, % vs ratio).
 - Dates as raw timestamps where the reader needs Month / Quarter / Week.
@@ -73,10 +73,10 @@ Keep the defect list short and concrete: *page → element → what is wrong*.
 
 - **Tie-out:** for every headline KPI, run an independent query against the warehouse (or the data model) for the same period and filters. Record both numbers. Differences need an explanation, not a rounding excuse.
 - **Grain:** confirm joins do not fan out. Totals that are suspiciously round multiples of the true value usually mean a duplicated join.
-- **Filters and controls:** change each control through its main values and confirm every element it targets responds — and elements it should not touch do not. Check controls scoped to one page vs the whole workbook.
+- **Filters and controls:** change each control through its main values and confirm every element it targets responds, and elements it should not touch do not. Check controls scoped to one page vs the whole workbook.
 - **Date logic:** confirm "current period," "last period," and relative date controls land on the dates the label claims, and how time zones are handled.
 - **Nulls and blanks:** check how nulls render in KPIs, groupings, and charts. "(null)" as a category label is a defect.
-- **Lineage:** child elements should derive from a sensible parent. Duplicate source queries for the same metric drift apart over time — consolidate where it is safe.
+- **Lineage:** child elements should derive from a sensible parent. Duplicate source queries for the same metric drift apart over time, so consolidate where it is safe.
 
 ### 4. Interaction pass
 
@@ -137,4 +137,4 @@ Report what matters: what was fixed, what was verified (including tie-out number
 
 ---
 
-Part of [sigma-skills](https://github.com/linerss/sigma-skills) by [Greyfield Data](https://greyfielddata.com) — Sigma Computing consultants.
+Part of [sigma-skills](https://github.com/linerss/sigma-skills) by [Greyfield Data](https://greyfielddata.com): Sigma Computing consultants.

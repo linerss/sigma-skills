@@ -1,18 +1,18 @@
 ---
 name: sigma-build
-description: Build a Sigma Computing workbook or data app that matches an agreed HTML benchmark. Use after sigma-html-benchmark, or whenever asked to build, rebuild, or implement a Sigma dashboard, data app, or page from a design. Builds through a Sigma MCP connector when one is connected; otherwise produces exact click-by-click steps for the Sigma UI.
+description: "Build a Sigma Computing workbook or data app that matches an agreed HTML benchmark. Use after sigma-html-benchmark, or whenever asked to build, rebuild, or implement a Sigma dashboard, data app, or page from a design. Builds through a Sigma MCP connector when one is connected; otherwise produces exact click-by-click steps for the Sigma UI."
 ---
 
 # Sigma Build
 
-Build the workbook the benchmark describes — nothing more, nothing less. The HTML benchmark is the quality bar; the build is finished when the published Sigma pages match it and the numbers tie out.
+Build the workbook the benchmark describes: nothing more, nothing less. The HTML benchmark is the quality bar; the build is finished when the published Sigma pages match it and the numbers tie out.
 
 **No benchmark yet?** Stop and run the **sigma-html-benchmark** skill first. Building straight into Sigma without an agreed design is how workbooks end up rebuilt twice.
 
 ## House rules
 
 1. **Title Case** for page names, element titles, tabs, menus, and buttons. Keep acronyms and client terms exactly as written.
-2. **Never change the math or the terminology.** Implement calculations exactly as specified. If one looks wrong, flag it — do not "fix" it silently.
+2. **Never change the math or the terminology.** Implement calculations exactly as specified. If one looks wrong, flag it. Do not "fix" it silently.
 3. **Tie out every headline KPI** against an independent warehouse query before calling the build done.
 4. **No edit-mode screenshots for clients.** Anything shown to a client comes from the published view, never the edit-mode bar.
 5. **Native Sigma only.** No CSS injection or workarounds the client's team cannot maintain. Match the benchmark with grid placement, element sizing, typography, colors, and spacing.
@@ -39,7 +39,7 @@ Summarize the decisions before building.
 
 - **A Sigma MCP connector is connected** (it can search sources, describe tables, run queries, and build/edit workbooks): build through it. See *Path A*.
 - **No connector**: produce a build guide the user follows in the Sigma UI. See *Path B*.
-- **API access, no connector**: Sigma can create a workbook from a JSON/YAML *code representation* via its REST API (public beta at the time of writing — check the docs). Useful for repeatable builds; not every feature is supported, and unsupported features are silently dropped.
+- **API access, no connector**: Sigma can create a workbook from a JSON/YAML *code representation* via its REST API (public beta at the time of writing: check the docs). Useful for repeatable builds; not every feature is supported, and unsupported features are silently dropped.
 
 Either way, do the data work first.
 
@@ -47,11 +47,11 @@ Either way, do the data work first.
 
 - Locate the exact source tables. Watch for duplicate copies of a table in different schemas or databases and confirm which one the client means.
 - Describe the columns and profile the data: row count, date range, grain, distinct counts of key dimensions.
-- For every metric in the benchmark, write the calculation and run it as a warehouse query. Record the expected values — these are the tie-out targets for QA.
+- For every metric in the benchmark, write the calculation and run it as a warehouse query. Record the expected values. These are the tie-out targets for QA.
 - Resolve ambiguous measures before building (e.g. is revenue `price` or `price × quantity`? gross or net? which date column defines the period?).
 - Decide where shared logic lives: one source element (or data model) per metric family that charts and KPIs reference as children, so numbers cannot drift apart.
 
-## Path A — build through a Sigma MCP connector
+## Path A: build through a Sigma MCP connector
 
 1. Start the session the connector requires before any other call.
 2. Read the connector's own instructions and SDK/reference resources before writing a build. Follow its conventions over anything here.
@@ -60,14 +60,14 @@ Either way, do the data work first.
 
 Lessons from real builds (connector behavior varies; check yours):
 
-- **Containers** may not be screenshot-able as single elements — screenshot the whole page instead.
+- **Containers** may not be screenshot-able as single elements: screenshot the whole page instead.
 - **Popovers** may need a container inside a header as their anchor rather than attaching to the header directly.
 - **Linked input tables:** build and commit the source table first, add the linked input table in a separate build step, then add seed rows in a further step.
-- **Hidden pages** (e.g. a Data page) may not be directly queryable through the connector — verify their values through a visible element or by re-running the logic as warehouse SQL.
-- **Helper or command libraries** referenced in docs may not be importable on every host — inline the logic if an import fails.
+- **Hidden pages** (e.g. a Data page) may not be directly queryable through the connector: verify their values through a visible element or by re-running the logic as warehouse SQL.
+- **Helper or command libraries** referenced in docs may not be importable on every host: inline the logic if an import fails.
 - Look up elements by ID and check their type after creation rather than assuming the build placed what you expected.
 
-## Path B — click-by-click build guide
+## Path B: click-by-click build guide
 
 Produce a guide the user can follow without guessing:
 
@@ -77,7 +77,7 @@ Produce a guide the user can follow without guessing:
 - Interactions: actions, drill-downs, input table permissions.
 - A check after each section: "the page should now look like benchmark page N, with these numbers: …".
 
-## 2. Match the benchmark — pixel perfect
+## 2. Match the benchmark: pixel perfect
 
 The standard is **pixel perfect**, not "close." "Better" is not done.
 
@@ -93,7 +93,7 @@ Then match the content:
 - Same pages, same element order, same grid proportions (keep the benchmark's 24-column splits; sections designed as stacks are built as stack containers).
 - Same titles, labels, number formats, and period labels.
 - KPIs show their comparison and period. Charts use one accent color for the primary series.
-- Cards sized to content — no fixed heights leaving empty space.
+- Cards sized to content: no fixed heights leaving empty space.
 - Form inputs read top-to-bottom within each column, columns equal width.
 
 Where Sigma cannot match the benchmark exactly, take the closest native option and list the difference in the handoff.
@@ -109,4 +109,4 @@ Run the **sigma-workbook-qa** skill before calling the build done. Then report:
 
 ---
 
-Part of [sigma-skills](https://github.com/linerss/sigma-skills) by [Greyfield Data](https://greyfielddata.com) — Sigma Computing consultants.
+Part of [sigma-skills](https://github.com/linerss/sigma-skills) by [Greyfield Data](https://greyfielddata.com): Sigma Computing consultants.
