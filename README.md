@@ -20,6 +20,7 @@ Iterating on layout and copy in HTML takes minutes. Iterating inside a Sigma wor
 - Never change the client's math or terminology; flag concerns instead.
 - Every headline KPI tied out against an independent warehouse query.
 - Client screenshots come from the published view, never edit mode.
+- The Sigma build must match the HTML benchmark pixel perfect, measured at the same screen width.
 - The agent interviews you one question at a time instead of guessing.
 
 ## Install

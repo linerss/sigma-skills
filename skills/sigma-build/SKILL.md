@@ -72,7 +72,18 @@ Produce a guide the user can follow without guessing:
 - Interactions: actions, drill-downs, input table permissions.
 - A check after each section: "the page should now look like benchmark page N, with these numbers: …".
 
-## 2. Match the benchmark
+## 2. Match the benchmark — pixel perfect
+
+The standard is **pixel perfect**, not "close." "Better" is not done.
+
+How to check it:
+
+1. Render the HTML benchmark and screenshot the published Sigma page at the **same viewport width** (e.g. 1512px).
+2. Measure, don't eyeball: left and right edges of every card, column widths, gutters, card heights, input field widths, title baselines, and font sizes. Compare the numbers between the two renders.
+3. List every difference as *page → element → benchmark value vs Sigma value* (e.g. "Costs card: right input column 412px vs 286px in benchmark").
+4. Fix the largest differences first, re-screenshot, re-measure. Repeat until every element lines up with the benchmark, or the remaining difference is a documented Sigma limitation.
+
+Then match the content:
 
 - Same pages, same element order, same grid proportions (Sigma uses a 24-column grid; keep the benchmark's column splits).
 - Same titles, labels, number formats, and period labels.

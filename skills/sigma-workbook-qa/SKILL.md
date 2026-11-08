@@ -45,7 +45,7 @@ Before reviewing, interview the user so the review checks what matters. Ask **on
 
 ### 2. Visual pass — every page, top to bottom
 
-Capture the first viewport, then scroll. Lower sections are where defects hide. If there is an HTML benchmark, render it at the same width and compare page by page.
+Capture the first viewport, then scroll. Lower sections are where defects hide. If there is an HTML benchmark, the bar is **pixel perfect**: render it and the published Sigma page at the same viewport width, measure card edges, column widths, gutters, heights, and font sizes in both, and log every difference as *element → benchmark vs Sigma*. A page passes only when the measurements match or the gap is a documented Sigma limitation.
 
 Common Sigma defects to look for:
 
@@ -108,6 +108,7 @@ Keep the defect list short and concrete: *page → element → what is wrong*.
 
 Do not call the workbook ready until all of these pass on the **published** version:
 
+- [ ] If there is a benchmark, every page matches it pixel perfect at the same viewport width (or the gap is a documented Sigma limitation).
 - [ ] Every reader-facing page renders with no errors, spinners, or empty elements under default controls.
 - [ ] Every headline KPI ties out to an independent warehouse query.
 - [ ] Every control changes the elements it should and only those.
