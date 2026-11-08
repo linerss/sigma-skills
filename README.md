@@ -12,7 +12,7 @@ They work with Claude, Cursor, or any agent that reads `SKILL.md` files, on any 
 
 ## Why HTML first
 
-Iterating on layout and copy in HTML takes minutes. Iterating inside a Sigma workbook takes hours. The benchmark is designed only with native Sigma elements on Sigma's 24-column grid, so the build can match it — and QA has a clear bar to measure against.
+Iterating on layout and copy in HTML takes minutes. Iterating inside a Sigma workbook takes hours. The benchmark is designed only with native Sigma elements on a 24-column grid, so the build can match it — and QA has a clear bar to measure against.
 
 ## House rules built in
 
@@ -22,6 +22,7 @@ Iterating on layout and copy in HTML takes minutes. Iterating inside a Sigma wor
 - Client screenshots come from the published view, never edit mode.
 - The Sigma build must match the HTML benchmark pixel perfect, measured at the same screen width.
 - The agent interviews you one question at a time instead of guessing.
+- The agent checks the official Sigma docs before relying on a feature, since Sigma ships changes weekly.
 
 ## Install
 

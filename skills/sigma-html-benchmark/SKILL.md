@@ -18,6 +18,10 @@ These apply to every benchmark:
 3. **Real numbers.** Use values pulled from the actual data (or a faithful sample of it), never lorem ipsum or invented round numbers. Fake numbers hide formatting and width problems.
 4. **No CSS tricks Sigma cannot copy.** No custom fonts Sigma's theme can't use, no gradients, shadows, overlapping elements, or hover effects that Sigma elements don't have.
 
+## Search the Sigma docs
+
+Sigma ships changes every week. Before designing or building with any feature you are not certain of, check the official docs at [help.sigmacomputing.com](https://help.sigmacomputing.com) (the [changelog](https://help.sigmacomputing.com/changelog) shows what changed). Most doc pages have a Markdown version (add `.md` to the URL), and Sigma publishes a docs MCP server at `https://help.sigmacomputing.com/_mcp/server` that agents can connect to. Cite the doc page when a decision depends on it, and trust the docs over this skill if they disagree.
+
 ## Workflow
 
 ### 1. Grill the user
@@ -45,7 +49,7 @@ Questions to cover:
 
 ### 3. Map to Sigma's building blocks
 
-Design only with elements Sigma has:
+Design only with elements Sigma has — data elements (tables, pivots, charts), UI elements (text, buttons, images, dividers, embeds), control elements (filters and parameters), plus input tables and layout containers:
 
 | Need | Sigma element |
 |---|---|
@@ -58,7 +62,7 @@ Design only with elements Sigma has:
 | Where | Map (point / region) |
 | Filter or parameter | Control (list, date range, text search, slider, switch) |
 | User-entered data, plans, approvals | Input table |
-| Grouped layout, cards, tabs | Container, tabbed container |
+| Grouped layout, cards, tabs | Container (grid or stack), tabbed container |
 | Explanations, headers | Text element |
 | Actions | Button (with actions), drawer/modal |
 
@@ -66,7 +70,8 @@ If a requested feature has no Sigma equivalent, say so in the benchmark notes an
 
 ### 4. Lay it out on Sigma's grid
 
-- Sigma pages lay out on a **24-column grid**. Size every element in whole columns (e.g. 16/8, 14/10, 12/12, 8/8/8) and keep shared top edges and heights inside a horizontal band.
+- Lay pages out on a **24-column grid** — the grid Sigma's own build tooling uses. Size every element in whole columns (e.g. 16/8, 14/10, 12/12, 8/8/8) and keep shared top edges and heights inside a horizontal band. Check the workbook's canvas width setting (Full or a custom maximum) and design at that width.
+- Where a section should reflow with content or screen size, design it as a **stack** (a container laid out like CSS flexbox: row or column, gap, fill / fit-content / fixed sizing) rather than fixed grid positions. Note in the build sheet which sections are stacks.
 - Build the HTML with a CSS grid of 24 equal columns at a typical client screen width (1440–1512px) so proportions translate 1:1.
 - Stack the page as bands, top to bottom: title → KPIs → main chart(s) → detail table. Controls go in a top toolbar band or a left rail column.
 - Size cards to their content. Fixed heights that leave empty space inside a card are a defect.

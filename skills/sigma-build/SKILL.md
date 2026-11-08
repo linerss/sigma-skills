@@ -17,6 +17,10 @@ Build the workbook the benchmark describes — nothing more, nothing less. The H
 4. **No edit-mode screenshots for clients.** Anything shown to a client comes from the published view, never the edit-mode bar.
 5. **Native Sigma only.** No CSS injection or workarounds the client's team cannot maintain. Match the benchmark with grid placement, element sizing, typography, colors, and spacing.
 
+## Search the Sigma docs
+
+Sigma ships changes every week. Before designing or building with any feature you are not certain of, check the official docs at [help.sigmacomputing.com](https://help.sigmacomputing.com) (the [changelog](https://help.sigmacomputing.com/changelog) shows what changed). Most doc pages have a Markdown version (add `.md` to the URL), and Sigma publishes a docs MCP server at `https://help.sigmacomputing.com/_mcp/server` that agents can connect to. Cite the doc page when a decision depends on it, and trust the docs over this skill if they disagree.
+
 ## Grill the user on gaps
 
 The benchmark answers most questions; grill the user on the rest before building. Ask **one question at a time** (multiple-choice with 2–4 concrete options when your agent supports it), acknowledge each answer, and keep going until nothing is left to guess. Never ask what you can check yourself in the data or the benchmark.
@@ -35,6 +39,7 @@ Summarize the decisions before building.
 
 - **A Sigma MCP connector is connected** (it can search sources, describe tables, run queries, and build/edit workbooks): build through it. See *Path A*.
 - **No connector**: produce a build guide the user follows in the Sigma UI. See *Path B*.
+- **API access, no connector**: Sigma can create a workbook from a JSON/YAML *code representation* via its REST API (public beta at the time of writing — check the docs). Useful for repeatable builds; not every feature is supported, and unsupported features are silently dropped.
 
 Either way, do the data work first.
 
@@ -85,7 +90,7 @@ How to check it:
 
 Then match the content:
 
-- Same pages, same element order, same grid proportions (Sigma uses a 24-column grid; keep the benchmark's column splits).
+- Same pages, same element order, same grid proportions (keep the benchmark's 24-column splits; sections designed as stacks are built as stack containers).
 - Same titles, labels, number formats, and period labels.
 - KPIs show their comparison and period. Charts use one accent color for the primary series.
 - Cards sized to content — no fixed heights leaving empty space.

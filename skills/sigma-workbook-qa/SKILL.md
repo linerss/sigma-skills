@@ -24,6 +24,10 @@ Use this skill for any Sigma workbook, dashboard, data app, or embed that is abo
 3. **Tie out every headline KPI** against an independent warehouse query.
 4. **No edit-mode screenshots for clients.** Review and capture the published view.
 
+## Search the Sigma docs
+
+Sigma ships changes every week. Before designing or building with any feature you are not certain of, check the official docs at [help.sigmacomputing.com](https://help.sigmacomputing.com) (the [changelog](https://help.sigmacomputing.com/changelog) shows what changed). Most doc pages have a Markdown version (add `.md` to the URL), and Sigma publishes a docs MCP server at `https://help.sigmacomputing.com/_mcp/server` that agents can connect to. Cite the doc page when a decision depends on it, and trust the docs over this skill if they disagree.
+
 ## Workflow
 
 ### 0. Grill the user
