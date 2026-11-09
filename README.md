@@ -30,6 +30,8 @@ Iterating on layout and copy in HTML takes minutes. Iterating inside a Sigma wor
 npx skills add linerss/sigma-skills
 ```
 
+**Claude chat (claude.ai and the Claude apps):** download a skill's zip from the [Greyfield Claude skills library](https://greyfielddata.com/claude-skills) and upload it as a custom skill, then turn it on under Customize > Skills.
+
 Or copy a skill folder into your agent's skills directory (for Claude Code: `~/.claude/skills/<skill-name>/`).
 
 ## Use

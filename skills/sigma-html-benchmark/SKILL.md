@@ -1,6 +1,6 @@
 ---
 name: sigma-html-benchmark
-description: "Design a Sigma Computing workbook or data app as an HTML mockup BEFORE building anything in Sigma. Use whenever someone asks to build, redesign, or plan a Sigma dashboard, data app, or report: grill the user one question at a time, then produce a Sigma-buildable HTML benchmark on Sigma's grid with real sample numbers, get it agreed, then hand it to the sigma-build skill."
+description: "Design a Sigma Computing workbook as an HTML mockup before building. Use when asked to build, redesign or plan a Sigma dashboard: grill the user, then mock up every page."
 ---
 
 # Sigma HTML Benchmark

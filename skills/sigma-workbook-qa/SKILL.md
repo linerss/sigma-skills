@@ -1,6 +1,6 @@
 ---
 name: sigma-workbook-qa
-description: "Grill the user, then review, polish, and sign off Sigma Computing workbooks and data apps before they reach a client or exec. Use when asked to QA, audit, clean up, fix, polish, or \"make client-ready\" a Sigma workbook, dashboard, page, or embedded view: render the real pages, name defects, fix the smallest thing, verify the data, and re-render before calling it done."
+description: "QA a Sigma Computing workbook before a client sees it: render every page, tie out KPIs, test controls. Use when asked to review, audit, fix or sign off a Sigma workbook."
 ---
 
 # Sigma Workbook QA

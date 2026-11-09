@@ -1,6 +1,6 @@
 ---
 name: sigma-build
-description: "Build a Sigma Computing workbook or data app that matches an agreed HTML benchmark. Use after sigma-html-benchmark, or whenever asked to build, rebuild, or implement a Sigma dashboard, data app, or page from a design. Builds through a Sigma MCP connector when one is connected; otherwise produces exact click-by-click steps for the Sigma UI."
+description: "Build a Sigma Computing workbook that matches an agreed HTML mockup, pixel for pixel. Use after sigma-html-benchmark or when asked to build a Sigma dashboard from a design."
 ---
 
 # Sigma Build
